@@ -18,7 +18,7 @@ function App() {
 		// add the given item to the cart
 		setCart(item);
 	};
-
+	console.log(cart);
 	return (
 		<div className="App">
 			<Navigation cart={cart} />
@@ -27,16 +27,14 @@ function App() {
 				<Route
 					exact
 					path="/"
-					render={() => (
-						<Products/>
-					)}
+					component={Products}
 				/>
+			</ProductContext.Provider>
 
 				<Route
 					path="/cart"
 					render={() => <ShoppingCart cart={cart} />}
 				/>
-			</ProductContext.Provider>
 		</div>
 	);
 }
