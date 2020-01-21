@@ -29,7 +29,6 @@ function App() {
 		
 	}, [cart]);
 
-	console.log(JSON.parse(window.localStorage.getItem('cart')));
 	return (
 		<div className="App">
 			<ProductContext.Provider value={{products, addItem}}>
